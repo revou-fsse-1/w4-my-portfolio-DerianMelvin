@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+:root {
+  --global-leftright-padding: 6%;
+
+  --font-size-xxl: 250px;
+  --font-size-xl: 96px;
+  --font-size-l: 72px;
+  --font-size-m: 48px;
+  --font-size-s: 32px;
+  --font-size-body: 18px;
+
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --color-very-dark-blue: #1b1d23;
+  --color-dark-grey: #60636d;
+  --color-medium-grey: #7d828f;
+  --color-light-grey: #c8ccd8;
+  --color-light-grey: #c8ccd8;
+  --color-very-light-grey: #eeeff4;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+button {
+  font-family: "League Spartan", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-size: var(--font-size-m);
+  font-weight: 700;
+}
+
+h4 {
+  font-size: var(--font-size-s);
+  font-weight: 700;
+}
+
+p,
+button {
+  font-size: var(--font-size-body);
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-medium-grey);
+}
+
+button {
+  padding: 1.6rem 2.1rem;
+  padding-top: 1.5rem;
+  padding-right: 2.5rem;
+  width: fit-content;
+  border: none;
+
+  background-color: var(--color-very-dark-blue);
+  color: white;
+}
+
+button > img {
+  position: relative;
+  left: 10px;
+  top: 6px;
+}
+
+/* 
+  --------------------------------------------------------------------
+    HEADER
+  --------------------------------------------------------------------
+*/
+
+header > span,
+.header-menu,
+.hamburger-menu,
+.banner-nav {
+  display: none;
+}
+
+.header-nav {
+  padding: 1.7rem var(--global-leftright-padding);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  padding: 0 var(--global-leftright-padding);
+  height: 560px;
+
+  display: flex;
+  align-items: center;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(/assets/home/mobile/image-hero-paramour.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+main > article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main h1 {
+  font-size: 65px;
+  font-weight: 500;
+}
+
+main button {
+  margin-top: 6rem;
+}
+
+/* 
+  --------------------------------------------------------------------
+    WELCOME
+  --------------------------------------------------------------------
+*/
+
+.home-welcome-section::before {
+  content: "";
+
+  margin-bottom: 4rem;
+  width: 75px;
+  height: 2px;
+
+  background-color: var(--color-light-grey);
+}
+
+.home-welcome-section {
+  padding: 0 var(--global-leftright-padding);
+  margin: 4rem 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.home-welcome-section > article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 
+  --------------------------------------------------------------------
+    SECONDARY BANNER
+  --------------------------------------------------------------------
+*/
+
+.home-secondary-banner {
+  padding: 0 var(--global-leftright-padding);
+  height: 560px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(/assets/home/mobile/image-small-team.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+/* 
+  --------------------------------------------------------------------
+    FEATURED
+  --------------------------------------------------------------------
+*/
+
+.home-featured {
+  padding: 0 var(--global-leftright-padding);
+  margin: 4rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-featured h2 {
+  margin-bottom: 1rem;
+}
+
+.featured-project-list {
+  display: grid;
+  grid-template-areas:
+    "project-1"
+    "project-2"
+    "project-3";
+  grid-template-rows: repeat(3, 250px);
+  grid-template-columns: 1fr;
+  gap: 25px;
+
+  color: white;
+}
+
+.featured-project-list > article h3 {
+  display: none;
+}
+
+.featured-project-list > article a {
+  color: var(--color-very-light-grey);
+}
+
+.featured-project-list > article {
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.featured-project-list > article:nth-child(1) {
+  grid-area: project-1;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(/assets/home/mobile/image-del-sol.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-project-list > article:nth-child(2) {
+  grid-area: project-2;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(/assets/home/mobile/image-228b.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-project-list > article:nth-child(3) {
+  grid-area: project-3;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(/assets/home/mobile/image-prototype.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-featured button {
+  width: auto;
+}
+
+/* 
+  --------------------------------------------------------------------
+    FOOTER
+  --------------------------------------------------------------------
+*/
+
+footer {
+  margin-top: 8rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--color-very-light-grey);
+}
+
+footer .logo {
+  padding-top: 3rem;
+  padding-left: 1.6rem;
+  width: 150px;
+  height: 150px;
+
+  position: relative;
+  bottom: 75px;
+
+  background-color: var(--color-very-dark-blue);
+}
+
+footer ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  position: relative;
+  bottom: 40px;
+}
+
+/* 
+  --------------------------------------------------------------------
+    MEDIA QUERIES
+  --------------------------------------------------------------------
+*/
+
+/* 
+  ------------------------------------- TABLET -------------------------------------
+*/
+
+@media screen and (min-width: 700px) {
+  :root {
+    --global-leftright-padding: 11%;
+  }
+
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-l);
+  }
+
+  /* ----- HEADER ----- */
+  header > span,
+  .header-menu {
+    display: block;
+  }
+
+  header > span {
+    position: absolute;
+    left: 6%;
+    top: 180px;
+
+    font-size: 18px;
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    color: var(--color-light-grey);
+
+    transform: rotate(90deg) translateY(4rem);
+  }
+
+  header > span::before {
+    content: "";
+    display: block;
+
+    width: 120px;
+    height: 1px;
+
+    position: absolute;
+    left: -160px;
+    top: 6px;
+
+    background-color: var(--color-light-grey);
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .header-nav {
+    padding: 2.3rem var(--global-leftright-padding);
+  }
+
+  .header-menu {
+    padding: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .header-menu li a {
+    padding: 1.3rem;
+  }
+
+  main {
+    padding: 0 3rem;
+    margin: 0 var(--global-leftright-padding);
+    height: 720px;
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url(/assets/home/tablet/image-hero-paramour.jpg);
+  }
+
+  main h1 {
+    width: 75%;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+  }
+
+  main p {
+    width: 75%;
+  }
+
+  main button {
+    margin-top: 3rem;
+  }
+
+  /* ----- WELCOME ----- */
+  .home-welcome-section::before {
+    content: "Welcome";
+    margin-bottom: 8rem;
+    margin-left: 0.5rem;
+    width: 0;
+    height: 0;
+
+    font-size: 140px;
+    font-weight: 500;
+
+    background-color: none;
+    color: var(--color-very-light-grey);
+  }
+
+  /* ----- SECONDARY BANNER ----- */
+  .home-secondary-banner {
+    padding: 0 3rem;
+    margin: 5rem var(--global-leftright-padding);
+    height: 580px;
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url(/assets/home/tablet/image-small-team.jpg);
+  }
+
+  /* ----- FEATURED ----- */
+  .home-featured {
+    padding: 0 var(--global-leftright-padding);
+
+    flex-direction: none;
+
+    display: grid;
+    grid-template-areas:
+      "featured-title featured-button"
+      "featured-project featured-project";
+    grid-template-rows: max-content max-content;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-featured h2 {
+    grid-area: featured-title;
+    margin: 0;
+    align-self: center;
+  }
+
+  .home-featured .featured-project-list {
+    grid-area: featured-project;
+  }
+
+  .home-featured button {
+    grid-area: featured-button;
+    width: fit-content;
+    justify-self: end;
+  }
+
+  .featured-project-list {
+    grid-template-rows: repeat(3, 290px);
+  }
+
+  .featured-project-list > article h3 {
+    display: block;
+  }
+
+  .featured-project-list > article {
+    padding: 1.5rem;
+
+    flex-direction: none;
+
+    display: grid;
+    grid-template-areas:
+      ". project-number"
+      "project-name project-number"
+      "project-link project-number";
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-project-list > article h3 {
+    grid-area: project-number;
+    align-self: center;
+    justify-self: end;
+
+    font-size: var(--font-size-xxl);
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .featured-project-list > article h4 {
+    grid-area: project-name;
+  }
+
+  .featured-project-list > article a {
+    grid-area: project-link;
+  }
+
+  .featured-project-list > article:nth-child(1) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(/assets/home/tablet/image-del-sol.jpg);
+  }
+
+  .featured-project-list > article:nth-child(2) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(/assets/home/tablet/image-228b.jpg);
+  }
+
+  .featured-project-list > article:nth-child(3) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(/assets/home/tablet/image-prototype.jpg);
+  }
+
+  /* ----- FOOTER ----- */
+  footer {
+    margin-top: 6rem;
+    width: calc(100% - var(--global-leftright-padding));
+    padding-bottom: 0;
+
+    flex-direction: row;
+  }
+
+  footer .logo {
+    padding-top: 3.3rem;
+    padding-left: 1.6rem;
+
+    bottom: 0;
+  }
+
+  footer ul {
+    margin: 0 auto;
+    flex-direction: row;
+    align-self: center;
+    gap: 40px;
+
+    bottom: 0;
+    right: 60px;
+  }
+
+  footer ul li a {
+    padding: 1.3rem 0;
+  }
+
+  footer button {
+    position: absolute;
+    right: 0;
+  }
+}
+
+/* 
+  ------------------------------------- DESKTOP -------------------------------------
+*/
+@media screen and (min-width: 1350px) {
+  :root {
+    --global-leftright-padding: 14%;
+  }
+
+  /* ----- HEADER ----- */
+  header > span {
+    position: absolute;
+    left: 9%;
+
+    font-size: 20px;
+  }
+
+  .header-menu {
+    padding: 0;
+    margin-left: 6rem;
+
+    justify-content: flex-start;
+    gap: 75px;
+  }
+
+  main {
+    padding: 0 11rem;
+    height: 810px;
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url(/assets/home/desktop/image-hero-paramour.jpg);
+  }
+
+  .banner-nav {
+    display: block;
+  }
+
+  .banner-nav ul {
+    margin-left: var(--global-leftright-padding);
+    padding: 0;
+
+    display: flex;
+
+    position: relative;
+    bottom: 100px;
+    right: 100px;
+  }
+
+  .banner-nav ul li {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+  }
+
+  .banner-nav ul li:nth-child(1) {
+    background-color: var(--color-very-dark-blue);
+  }
+
+  .banner-nav ul li:nth-child(1) a {
+    color: white;
+  }
+
+  .banner-nav ul li a {
+    padding: 2.5rem;
+  }
+
+  /* ----- WELCOME ----- */
+  .home-welcome-section::before {
+    margin-left: 2vw;
+
+    position: relative;
+    bottom: 55px;
+
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+  }
+
+  .home-welcome-section > article {
+    margin-left: var(--global-leftright-padding);
+    width: 40%;
+    min-width: 388px;
+    max-width: 500px;
+  }
+
+  .home-welcome-section > article::after {
+    content: url(/assets/home/desktop/image-welcome.jpg);
+
+    position: absolute;
+    right: var(--global-leftright-padding);
+
+    transform: translateY(-6rem);
+    z-index: -1;
+  }
+
+  /* ----- SECONDARY BANNER ----- */
+  .home-secondary-banner {
+    padding: 0 11rem;
+    height: 680px;
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url(/assets/home/desktop/image-small-team.jpg);
+  }
+
+  /* ----- FEATURED ----- */
+  .home-featured {
+    gap: 50px;
+  }
+
+  .featured-project-list {
+    grid-template-areas:
+      "project-1 project-2 project-3";
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-project-list > article {
+    padding: 3rem;
+    height: 36vw;
+
+    grid-template-areas:
+      "project-number"
+      "project-name"
+      "project-link";
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  .featured-project-list > article h3 {
+    transform: translate(3.9rem, -5rem);
+  }
+
+  .featured-project-list > article:nth-child(1) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(/assets/home/desktop/image-del-sol.jpg);
+  }
+
+  .featured-project-list > article:nth-child(2) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(/assets/home/desktop/image-228b.jpg);
+  }
+
+  .featured-project-list > article:nth-child(3) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(/assets/home/desktop/image-prototype.jpg);
+  }
+
+  /* ----- FOOTER ----- */
+  footer {
+    margin: 0 var(--global-leftright-padding);
+    width: 65%;
+  }
+
+  footer ul {
+    margin: 0 var(--global-leftright-padding);
+    gap: 75px;
+  }
+
+  footer button {
+    right: var(--global-leftright-padding);
+  }
+}
