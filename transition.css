@@ -1,0 +1,67 @@
+button {
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+}
+
+button:hover {
+  background-color: var(--color-dark-grey);
+}
+
+/* 
+  --------------------------------------------------------------------
+    HEADER
+  --------------------------------------------------------------------
+*/
+
+/* ----- TABLET ----- */
+@media screen and (min-width: 700px) {
+  .header-menu a,
+  footer a {
+    transition: all 0.15s ease-out;
+  }
+
+  .header-menu a:hover,
+  footer a:hover {
+    color: var(--color-very-dark-blue);
+  }
+}
+
+/* ----- DESKTOP ----- */
+@media screen and (min-width: 1350px) {
+  .banner-nav li {
+    transition: all 0.15s ease-out;
+  }
+
+  .banner-nav li:hover {
+    background-color: var(--color-very-light-grey);
+  }
+}
+
+/* 
+  --------------------------------------------------------------------
+    FEATURED
+  --------------------------------------------------------------------
+*/
+
+/* ----- TABLET ----- */
+@media screen and (min-width: 700px) {
+  .featured-project-list > article,
+  .featured-project-list > article h3 {
+    transition: all 0.25s ease-out;
+  }
+
+  .featured-project-list > article:hover {
+    padding-left: 2.5rem;
+  }
+
+  .featured-project-list > article:hover h3 {
+    transform: translate(-1.9rem, 0);
+  }
+}
+
+/* ----- DESKTOP ----- */
+@media screen and (min-width: 1350px) {
+  .featured-project-list > article:hover h3 {
+    transform: translate(2.9rem, -5rem);
+  }
+}
